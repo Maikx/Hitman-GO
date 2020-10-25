@@ -8,35 +8,54 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
     public bool isMoving;
-    private Waypoints wpS;
+    private Right right;
+    private Left left;
+    private Forward forward;
+    private Backward backward;
 
+    public bool canMoveRight;
+    public bool canMoveLeft;
+    public bool canMoveForward;
+    public bool canMoveBackward;
+
+    public Transform playerpos;
+    public Transform target = null;
 
     void Start()
     {
-        wpS = GameObject.Find("Level").GetComponent<Waypoints>();
+        right = GameObject.Find("Right").GetComponent<Right>();
+        left = GameObject.Find("Left").GetComponent<Left>();
+        forward = GameObject.Find("Forward").GetComponent<Forward>();
+        backward = GameObject.Find("Backward").GetComponent<Backward>();
         isMoving = false;
+        canMoveRight = false;
     }
 
-    void Update()
+    private void Update()
     {
-        MoveToWayPoint();
+        Movement();
     }
 
-    void MoveToWayPoint()
+    private void Movement()
     {
-        if (transform.position != wpS.waypoint[wpS.current].position)
+
+        playerpos = gameObject.GetComponent<Transform>();
+        if (isMoving == true)
         {
-            Vector3 pos = Vector3.MoveTowards(transform.position, wpS.waypoint[wpS.current].position, speed * Time.deltaTime);
-            GetComponent<Rigidbody>().MovePosition(pos);
-            isMoving = true;
+            canMoveRight = false;
+            canMoveLeft = false;
+            canMoveForward = false;
+            canMoveBackward = false;
         }
-        else
+
+        if (target != null)
         {
-            isMoving = false;
-        }
-        if (Input.GetKeyDown(KeyCode.D) && isMoving == false)
-        {
-            wpS.current = (wpS.current + 1); //% waypoint.Length;
+            float step = speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
         }
     }
+
 }
+
+
+
