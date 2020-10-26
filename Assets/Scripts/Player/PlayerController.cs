@@ -40,6 +40,8 @@ public class PlayerController : MonoBehaviour
     {
 
         playerpos = gameObject.GetComponent<Transform>();
+
+        //This is not implemented yet...
         if (isMoving == true)
         {
             canMoveRight = false;
@@ -48,6 +50,7 @@ public class PlayerController : MonoBehaviour
             canMoveBackward = false;
         }
 
+        //Target is where the player will move to, it changes everytime in the other scripts (Backward, Forward, Left, Right)
         if (target != null)
         {
             float step = speed * Time.deltaTime;

@@ -2,40 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Backward : MonoBehaviour
+public class Forward : MonoBehaviour
 {
     private PlayerController pC;
 
-    public Transform backward;
+    public Transform forward;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         pC = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         KeyBinding();
     }
 
+    //This is where the Target is set from the colliding object.
     public void KeyBinding()
     {
-        if (Input.GetKey(KeyCode.S) && pC.canMoveBackward == true && pC.isMoving == false)
+        if (Input.GetKey(KeyCode.W) && pC.canMoveForward == true && pC.isMoving == false)
         {
-            pC.target = backward;
-            pC.canMoveBackward = false;
+            pC.target = forward;
+            pC.canMoveForward = false;
         }
     }
 
+    //This is where the position of the waypoint is stored.
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Waypoint")
         {
-            pC.canMoveBackward = true;
-            backward = collision.gameObject.transform;
+            pC.canMoveForward = true;
+            forward = collision.gameObject.transform;
         }
     }
-
 }
