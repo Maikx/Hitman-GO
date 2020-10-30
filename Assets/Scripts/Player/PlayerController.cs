@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
 
     public Transform playerpos;
     public Transform target = null;
+    private GameManager gm;
+
 
     void Start()
     {
@@ -27,6 +29,8 @@ public class PlayerController : MonoBehaviour
         left = GameObject.Find("Left").GetComponent<Left>();
         forward = GameObject.Find("Forward").GetComponent<Forward>();
         backward = GameObject.Find("Backward").GetComponent<Backward>();
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        transform.position = gm.playerStartingPosition;
         isMoving = false;
         canMoveRight = false;
     }

@@ -33,7 +33,7 @@ public class Left : MonoBehaviour
     //This is where the position of the waypoint is stored.
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Waypoint")
+        if (collision.gameObject.layer == 0)
         {
             pC.canMoveLeft = true;
             left = collision.gameObject.transform;

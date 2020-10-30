@@ -33,7 +33,7 @@ public class Right : MonoBehaviour
     //This is where the position of the waypoint is stored.
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Waypoint")
+        if (collision.gameObject.layer == 0)
         {
             pC.canMoveRight = true;
             right = collision.gameObject.transform;
