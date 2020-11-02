@@ -9,6 +9,7 @@ public class GridBehavior : MonoBehaviour
     public int columns;
     public int scale;
     public GameObject gridPrefab;
+
     public Vector3 leftBottomLocation = new Vector3(0, 0, 0);
     public GameObject[,] gridArray;
 

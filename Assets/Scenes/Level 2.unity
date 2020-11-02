@@ -245,7 +245,7 @@ MonoBehaviour:
   rows: 4
   columns: 3
   scale: 4
-  gridPrefab: {fileID: 4969282467439487476, guid: 0d0ef7ea2632bee43a8e8332e29e7d63,
+  gridPrefab: {fileID: 2808973773026865276, guid: 8477e15b8a7c5b845af097540bddc745,
     type: 3}
   leftBottomLocation: {x: 0, y: 0, z: 0}
 --- !u!4 &421583476

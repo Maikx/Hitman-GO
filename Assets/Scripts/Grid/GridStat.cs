@@ -14,22 +14,24 @@ public class GridStat : MonoBehaviour
     public bool isFinish;
     public bool moveCamera;
     private PlayerController pC;
-
+    public GameObject waypoint;
     private GameManager gm;
+
     void Start()
     {
         pC = GameObject.Find("Player").GetComponent<PlayerController>();
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
-        
+
         if (gm.level_1 == true)
         {
-            if (x == 0 && y == 0 || x == 0 && y == 1 || x == 0 && y == 2)
+            if (x == 1 && y == 1 || x == 1 && y == 2 || x == 1 && y == 3)
             {
+                waypoint.SetActive(true);
                 gameObject.layer = 9;
             }
             else
             {
-                gameObject.SetActive(false);
+                waypoint.SetActive(false);
             }
         }
 
@@ -37,11 +39,12 @@ public class GridStat : MonoBehaviour
         {
             if (x == 0 && y == 0 || x == 1 && y == 0 || x == 2 && y == 0 || x == 2 && y == 1 || x == 2 && y == 2 || x == 2 && y == 3)
             {
+                waypoint.SetActive(true);
                 gameObject.layer = 9;
             }
             else
             {
-                gameObject.SetActive(false);
+                waypoint.SetActive(false);
             }
         }
 
