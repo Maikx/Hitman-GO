@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     public bool canMoveForward;
     public bool canMoveBackward;
 
-    public Transform playerpos;
+    public Vector3 playerpos;
     public Transform target = null;
     private GameManager gm;
 
@@ -42,8 +42,7 @@ public class PlayerController : MonoBehaviour
 
     private void Movement()
     {
-
-        playerpos = gameObject.GetComponent<Transform>();
+        playerpos = transform.position;
 
         //This is not implemented yet...
         if (isMoving == true)

@@ -89,7 +89,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4969282467439487479}
   - component: {fileID: 4969282467439487464}
-  - component: {fileID: 2080243547392440660}
   - component: {fileID: -5835814665871771018}
   m_Layer: 8
   m_Name: Waypoint
@@ -126,24 +125,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2080243547392440660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4969282467439487476}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb056eed0140bf343a2c884e0d9764c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  denyRight: 0
-  denyLeft: 0
-  denyForward: 0
-  denyBackward: 0
-  isFinish: 0
-  moveCamera: 0
 --- !u!114 &-5835814665871771018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,3 +140,9 @@ MonoBehaviour:
   visited: -1
   x: 0
   y: 0
+  denyRight: 0
+  denyLeft: 0
+  denyForward: 0
+  denyBackward: 0
+  isFinish: 0
+  moveCamera: 0
