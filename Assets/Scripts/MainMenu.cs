@@ -11,6 +11,10 @@ public class MainMenu : MonoBehaviour
     public GameObject LevelSelection;
     public GameObject Options;
     public GameObject Main;
+    public GameObject Reset;
+    public GameObject Credits;
+    public bool Sound = true;
+    public bool Music = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -103,14 +107,65 @@ public class MainMenu : MonoBehaviour
         Main.gameObject.SetActive(false);
         Options.gameObject.SetActive(true);
     }
+    public void GoToLevelSelection()
+    {
+        Main.gameObject.SetActive(false);
+        LevelSelection.gameObject.SetActive(true);
+    }
+    #region Options
     public void BackToMenu()
     {
         Main.gameObject.SetActive(true);
         Options.gameObject.SetActive(false);
     }
-    public void GoToLevelSelection()
+    public void SoundBool()
     {
-        Main.gameObject.SetActive(false);
-        LevelSelection.gameObject.SetActive(true);
+        if(Sound==true)
+        {
+            Sound = false;
+        }
+        else
+        {
+            Sound = true;
+        }
+    }
+    public void MusicBool()
+    {
+        if(Music==true)
+        {
+            Music = false;
+        }
+        else
+        {
+            Music=true;
+        }
+    }
+    public void GoToResetGame()
+    {
+        Options.gameObject.SetActive(false);
+        Reset.gameObject.SetActive(true);
+    }
+    public void GoToCredits()
+    {
+        Options.gameObject.SetActive(false);
+        Credits.gameObject.SetActive(true);
+    }
+    #endregion
+
+    #region Reset
+    public void ConfirmReset()
+    {
+        Debug.Log("Game Resetted");
+    }
+    public void NegateReset()
+    {
+        Reset.gameObject.SetActive(false);
+        Options.gameObject.SetActive(true);
+    }
+    #endregion
+    public void BackToOptions()
+    {
+        Credits.gameObject.SetActive(false);
+        Options.gameObject.SetActive(true);
     }
 }
