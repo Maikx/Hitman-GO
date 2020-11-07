@@ -15,6 +15,11 @@ public class GridStat : MonoBehaviour
     public bool moveCamera;
     private PlayerController pC;
     public GameObject waypoint;
+    public GameObject Tile1;
+    public GameObject Tile2;
+    public GameObject Tile3;
+    public GameObject Tile4;
+    public GameObject Tile5;
     private GameManager gm;
 
     void Start()
@@ -22,16 +27,44 @@ public class GridStat : MonoBehaviour
         pC = GameObject.Find("Player").GetComponent<PlayerController>();
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
 
+        //This sets Tiles model and walkable by level..
         if (gm.level_1 == true)
         {
             if (x == 1 && y == 1 || x == 1 && y == 2 || x == 1 && y == 3)
             {
                 waypoint.SetActive(true);
                 gameObject.layer = 9;
+                
+                if (x == 1 && y == 1)
+                {
+                    Tile4.SetActive(true);
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
+                }
+
+                if (x == 1 && y == 2 || x == 1 && y == 3)
+                {
+                    Tile2.SetActive(true);
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
+                }
             }
             else
             {
-                waypoint.SetActive(false);
+                if (x == 0 && y == 0 || x == 1 && y == 0 || x == 2 && y == 0)
+                { 
+                  Tile5.SetActive(true); 
+                  transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z); 
+                }
+                if (x == 0 && y == 1 || x == 2 && y == 1)
+                {
+                    Tile3.SetActive(true);
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
+                }
+                if (x == 0 && y == 2 || x == 0 && y == 3 || x == 2 && y == 2 || x == 2 && y == 3)
+                {
+                    Tile1.SetActive(true);
+                }
+
+
             }
         }
 
