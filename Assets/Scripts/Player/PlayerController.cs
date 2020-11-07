@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Transactions;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -18,6 +19,8 @@ public class PlayerController : MonoBehaviour
     public bool canMoveForward;
     public bool canMoveBackward;
 
+    public GameObject player;
+    public GameObject playerCollider;
     public Vector3 playerpos;
     public Transform target = null;
     private GameManager gm;
@@ -38,6 +41,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         Movement();
+        DestroyPlayer();
     }
 
     private void Movement()
@@ -61,6 +65,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void DestroyPlayer()
+    {
+        if (playerCollider == null)
+        {
+            Destroy(player);
+        }
+    }
 }
 
 

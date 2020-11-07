@@ -6,6 +6,8 @@ public class Catch : MonoBehaviour
 {
     private Enemy enemy;
     private PlayerController pC;
+    public bool isPlayer;
+    public bool isRock;
 
     void Start()
     {
@@ -19,6 +21,7 @@ public class Catch : MonoBehaviour
         {
             pC.isMoving = true;
             enemy.target = collision.gameObject.transform;
+            isPlayer = true;
         }
     }
 }

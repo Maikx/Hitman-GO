@@ -150,6 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e51a51bdd8a0304e98fd28394eb5241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 0
+  isRock: 0
 --- !u!1 &3748743452209812678
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,7 +167,7 @@ GameObject:
   - component: {fileID: 4763464269363707270}
   m_Layer: 0
   m_Name: Enemy Test
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -259,4 +261,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ab355bc4ffc4d84da3947774dc7da95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forward: {fileID: 0}
+  speed: 0
+  target: {fileID: 0}

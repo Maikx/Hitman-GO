@@ -33,17 +33,9 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            Destroy(collision.gameObject);
-        }
-    }
-
-    private void OnCollisionStay(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && catchS.isPlayer == true)
         {
             Destroy(collision.gameObject);
         }

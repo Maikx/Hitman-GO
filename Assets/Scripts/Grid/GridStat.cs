@@ -45,6 +45,10 @@ public class GridStat : MonoBehaviour
                 {
                     Tile2.SetActive(true);
                     transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
+                    if(x == 1 && y == 3)
+                    {
+                        gameObject.tag = "Finish";
+                    }
                 }
             }
             else
