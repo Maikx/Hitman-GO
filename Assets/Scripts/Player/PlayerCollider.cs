@@ -11,7 +11,8 @@ public class PlayerCollider : MonoBehaviour
     void Start()
     {
         pC = GameObject.Find("Player").GetComponent<PlayerController>();
-        catchS = GameObject.Find("Front").GetComponent<Catch>();
+
+        if (GameObject.FindWithTag("Enemy") != null) catchS = GameObject.Find("Front").GetComponent<Catch>(); 
     }
 
     // Update is called once per frame

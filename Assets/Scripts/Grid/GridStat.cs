@@ -20,6 +20,15 @@ public class GridStat : MonoBehaviour
     public GameObject Tile3;
     public GameObject Tile4;
     public GameObject Tile5;
+    public GameObject Tile6_mini;
+    public GameObject Tile6;
+    public GameObject Tile7;
+    public GameObject Tile8_mini;
+    public GameObject Tile8;
+    public GameObject Tile9;
+    public GameObject Tile10;
+    public GameObject Tile11;
+    public GameObject Tile12;
     private GameManager gm;
 
     void Start()
@@ -45,7 +54,7 @@ public class GridStat : MonoBehaviour
                 {
                     Tile2.SetActive(true);
                     transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
-                    if(x == 1 && y == 3)
+                    if (x == 1 && y == 3)
                     {
                         gameObject.tag = "Finish";
                     }
@@ -55,8 +64,8 @@ public class GridStat : MonoBehaviour
             {
                 if (x == 0 && y == 0 || x == 1 && y == 0 || x == 2 && y == 0)
                 { 
-                  Tile5.SetActive(true); 
-                  transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z); 
+                  Tile5.SetActive(true);
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z); 
                 }
                 if (x == 0 && y == 1 || x == 2 && y == 1)
                 {
@@ -78,10 +87,37 @@ public class GridStat : MonoBehaviour
             {
                 waypoint.SetActive(true);
                 gameObject.layer = 9;
+                if (x == 0 && y == 0 || x == 1 && y == 0 || x == 2 && y == 1 || x == 2 && y == 2 || x == 2 && y == 3)
+                {
+                    Tile6_mini.SetActive(true);
+                    if (x == 2 && y == 1 || x == 2 && y == 2 || x == 2 && y == 3) transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 270, transform.eulerAngles.z);
+                    if (x == 0 && y == 0) gameObject.tag = "Finish";
+                }
+                if (x == 2 && y == 0)
+                {
+                    Tile7.SetActive(true);
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
+                }
             }
             else
             {
-                waypoint.SetActive(false);
+                if (x == 0 && y == 1 || x == 1 && y == 2 || x == 1 && y == 3)
+                {
+                    Tile8.SetActive(true);
+                    if (x == 1 && y == 2 || x == 1 && y == 3) transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
+                }
+
+                if (x == 0 && y == 2)
+                {
+                    Tile10.SetActive(true);
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
+                }
+
+                if (x == 0 && y == 3)
+                {
+                    Tile3.SetActive(true);
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 180, transform.eulerAngles.z);
+                }
             }
         }
 
