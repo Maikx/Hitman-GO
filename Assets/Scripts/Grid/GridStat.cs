@@ -14,8 +14,7 @@ public class GridStat : MonoBehaviour
     public bool isFinish;
     public bool moveCamera;
     private PlayerController pC;
-    public GameObject waypoint_1;
-    public GameObject waypoint_2;
+    public GameObject waypoint;
     public GameObject Tile1_1;
     public GameObject Tile2_1;
     public GameObject Tile3_1;
@@ -43,7 +42,7 @@ public class GridStat : MonoBehaviour
         {
             if (x == 1 && y == 1 || x == 1 && y == 2 || x == 1 && y == 3)
             {
-                waypoint_1.SetActive(true);
+                waypoint.SetActive(true);
                 gameObject.layer = 9;
                 
                 if (x == 1 && y == 1)
@@ -87,7 +86,7 @@ public class GridStat : MonoBehaviour
         {
             if (x == 0 && y == 0 || x == 1 && y == 0 || x == 2 && y == 0 || x == 2 && y == 1 || x == 2 && y == 2 || x == 2 && y == 3)
             {
-                waypoint_2.SetActive(true);
+                waypoint.SetActive(true);
                 gameObject.layer = 9;
                 if (x == 0 && y == 0 || x == 1 && y == 0 || x == 2 && y == 1 || x == 2 && y == 2 || x == 2 && y == 3)
                 {
@@ -123,7 +122,7 @@ public class GridStat : MonoBehaviour
                 if (x == 1 && y == 1)
                 {
                     Tile9_2.SetActive(true);
-                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 180, transform.eulerAngles.z);
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 270, transform.eulerAngles.z);
                 }
             }
         }

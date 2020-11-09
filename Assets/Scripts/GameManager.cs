@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     
     void Awake()
     {
-        if (level_1 == true) playerStartingPosition = new Vector3(4, 1.82f, 4);
+        if (level_1 == true) playerStartingPosition = new Vector3(4, 0, 4);
         if (level_2 == true) playerStartingPosition = new Vector3(8, 0, 12);
     }
 }
