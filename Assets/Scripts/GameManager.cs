@@ -13,12 +13,30 @@ public class GameManager : MonoBehaviour
     public bool level_6;
     //questi verrano cambiati con l'index della scena perchè occupano linee di script inutili..
 
+    private PlayerController pC;
     public Vector3 playerStartingPosition; 
     
     void Awake()
     {
         if (level_1 == true) playerStartingPosition = new Vector3(4, 0, 4);
         if (level_2 == true) playerStartingPosition = new Vector3(8, 0, 12);
+    }
+
+    void Start()
+    {
+        pC = GameObject.Find("Player").GetComponent<PlayerController>();
+    }
+
+    private void Update()
+    {
+        CheckGameStatus();
+    }
+
+    void CheckGameStatus()
+    {
+        if (pC.playerIsCaught == true) Debug.Log("GameLost");
+
+        if (pC.playerIsAtFinish == true) Debug.Log("GameWon");
     }
 }
 

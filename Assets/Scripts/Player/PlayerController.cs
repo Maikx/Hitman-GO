@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     public bool canMoveLeft;
     public bool canMoveForward;
     public bool canMoveBackward;
+    public bool playerIsCaught;
+    public bool playerIsAtFinish;
 
     public GameObject player;
     public GameObject playerCollider;
@@ -36,12 +38,14 @@ public class PlayerController : MonoBehaviour
         transform.position = gm.playerStartingPosition;
         isMoving = false;
         canMoveRight = false;
+        playerIsCaught = false;
     }
 
     private void Update()
     {
         Movement();
         DestroyPlayer();
+        PlayerCaught();
     }
 
     private void Movement()
@@ -65,11 +69,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void PlayerCaught()
+    {
+        if(playerIsCaught == true)Destroy(player);
+    }
+
     private void DestroyPlayer()
     {
         if (playerCollider == null)
         {
-            Destroy(player);
+            playerIsCaught = true;
         }
     }
 }

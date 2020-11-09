@@ -26,6 +26,7 @@ public class PlayerCollider : MonoBehaviour
         if (collision.gameObject.tag == "Finish")
         {
             pC.isMoving = true;
+            pC.playerIsAtFinish = true;
         }
         if (collision.gameObject.tag == "Enemy" && catchS.isPlayer == false)
         {
