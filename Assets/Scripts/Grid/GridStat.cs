@@ -35,6 +35,8 @@ public class GridStat : MonoBehaviour
     public GameObject Tile8_3;
     public GameObject Tile11_3;
     public GameObject Tile12_3;
+    public GameObject Tile1_4;
+    public GameObject Tile2_4;
     private GameManager gm;
 
     void Start()
@@ -51,7 +53,7 @@ public class GridStat : MonoBehaviour
             {
                 waypoint.SetActive(true);
                 gameObject.layer = 9;
-                
+
                 if (x == 1 && y == 1)
                 {
                     Tile4_1.SetActive(true);
@@ -71,9 +73,9 @@ public class GridStat : MonoBehaviour
             else
             {
                 if (x == 0 && y == 0 || x == 1 && y == 0 || x == 2 && y == 0)
-                { 
-                  Tile5_1.SetActive(true);
-                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z); 
+                {
+                    Tile5_1.SetActive(true);
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
                 }
                 if (x == 0 && y == 1 || x == 2 && y == 1)
                 {
@@ -176,11 +178,48 @@ public class GridStat : MonoBehaviour
                 }
             }
         }
+        #endregion
 
+
+
+        if (gm.level_4 == true)
+        {
+            if (x == 0 && y == 0 || x == 0 && y == 1 || x == 0 && y == 2 || x == 0 && y == 3 || x == 1 && y == 0 || x == 1 && y == 1 || x == 1 && y == 2 || x == 1 && y == 3 || x == 1 && y == 4 || x == 2 && y == 0 || x == 2 && y == 1 || x == 2 && y == 2 || x == 2 && y == 3 || x == 2 && y == 4 || x == 3 && y == 0 || x == 3 && y == 1 || x == 3 && y == 2 || x == 3 && y == 3)
+            {
+                waypoint.SetActive(true);
+                gameObject.layer = 9;
+
+                if (x == 0 && y == 0 || x == 0 && y == 1 || x == 0 && y == 2 || x == 0 && y == 3 || x == 1 && y == 0 || x == 1 && y == 1 || x == 1 && y == 2 || x == 1 && y == 3 || x == 1 && y == 4 || x == 3 && y == 0 || x == 3 && y == 1 || x == 3 && y == 2 || x == 3 && y == 3)
+                {
+                    Tile1_4.SetActive(true);
+                    if (x == 0 && y == 2) denyBackward = true;
+                    if (x == 1 && y == 2) denyForward = true;
+                    if (x == 1 && y == 3) denyLeft = true;
+                    if (x == 1 && y == 2) denyRight = true;
+                    if (x == 3 && y == 2) denyForward = true;
+                }
+
+                if (x == 2 && y == 0 || x == 2 && y == 1 || x == 2 && y == 2 || x == 2 && y == 3 || x == 2 && y == 4)
+                {
+                    Tile2_4.SetActive(true);
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
+                    if (x == 2 && y == 3) denyRight = true;
+                    if (x == 2 && y == 4) denyLeft = true;
+                    if (x == 2 && y == 2) denyBackward = true;
+                }
+
+                    if (x == 2 && y == 4)
+                {
+                    gameObject.tag = "Finish";
+                }
+            }
+            else
+            {
+                if (x == 0 && y == 4 || x == 3 && y == 4) Tile1_4.SetActive(true);
+            }
+
+        }
     }
-    #endregion
-
-
     void PlayerCheck()
     {
         if (denyRight == true) pC.canMoveRight = false;
