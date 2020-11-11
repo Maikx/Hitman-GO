@@ -578,7 +578,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 339975984}
+      - m_Target: {fileID: 0}
         m_MethodName: GoToOptions
         m_Mode: 1
         m_Arguments:
@@ -901,7 +901,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 339975984}
+      - m_Target: {fileID: 0}
         m_MethodName: NegateReset
         m_Mode: 1
         m_Arguments:
@@ -1015,10 +1015,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 339975983}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c5faed60f318a748b5feff743867284, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c4842df00ad2f84f980bb9de66c2d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelSelection: {fileID: 833283770}
+  LevelSelection: {fileID: 0}
   Options: {fileID: 1255492490}
   Main: {fileID: 1127232918}
   Reset: {fileID: 630673611}
@@ -1489,7 +1489,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 339975984}
+      - m_Target: {fileID: 0}
         m_MethodName: BackToOptions
         m_Mode: 1
         m_Arguments:
@@ -1619,7 +1619,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 339975984}
+      - m_Target: {fileID: 0}
         m_MethodName: GoToLevel5
         m_Mode: 1
         m_Arguments:
@@ -1749,7 +1749,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 339975984}
+      - m_Target: {fileID: 0}
         m_MethodName: BackToMenu
         m_Mode: 1
         m_Arguments:
@@ -1879,7 +1879,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 339975984}
+      - m_Target: {fileID: 0}
         m_MethodName: SoundBool
         m_Mode: 1
         m_Arguments:
@@ -2047,7 +2047,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 339975984}
+      - m_Target: {fileID: 0}
         m_MethodName: GoToLevel3
         m_Mode: 1
         m_Arguments:
@@ -2255,7 +2255,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 339975984}
+      - m_Target: {fileID: 0}
         m_MethodName: GoToLevel2
         m_Mode: 1
         m_Arguments:
@@ -2463,7 +2463,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 339975984}
+      - m_Target: {fileID: 0}
         m_MethodName: GoToLevel1
         m_Mode: 1
         m_Arguments:
@@ -3166,7 +3166,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 339975984}
+      - m_Target: {fileID: 0}
         m_MethodName: GoToCredits
         m_Mode: 1
         m_Arguments:
@@ -3525,7 +3525,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 339975984}
+      - m_Target: {fileID: 0}
         m_MethodName: MusicBool
         m_Mode: 1
         m_Arguments:
@@ -4384,7 +4384,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 339975984}
+      - m_Target: {fileID: 0}
         m_MethodName: GoToLevel6
         m_Mode: 1
         m_Arguments:
@@ -5341,7 +5341,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 339975984}
+      - m_Target: {fileID: 0}
         m_MethodName: ConfirmReset
         m_Mode: 1
         m_Arguments:
@@ -5738,7 +5738,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 339975984}
+      - m_Target: {fileID: 0}
         m_MethodName: GoToLevelSelection
         m_Mode: 1
         m_Arguments:
@@ -6020,7 +6020,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 339975984}
+      - m_Target: {fileID: 0}
         m_MethodName: GoToLevel4
         m_Mode: 1
         m_Arguments:
@@ -6303,7 +6303,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 339975984}
+      - m_Target: {fileID: 0}
         m_MethodName: GoToResetGame
         m_Mode: 1
         m_Arguments:
@@ -6433,7 +6433,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 339975984}
+      - m_Target: {fileID: 0}
         m_MethodName: BackToMenu
         m_Mode: 1
         m_Arguments:
@@ -6797,7 +6797,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 339975984}
+      - m_Target: {fileID: 0}
         m_MethodName: GoToOptions
         m_Mode: 1
         m_Arguments:

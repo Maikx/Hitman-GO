@@ -30,6 +30,11 @@ public class GridStat : MonoBehaviour
     public GameObject Tile10_2;
     public GameObject Tile11_2;
     public GameObject Tile12_2;
+    public GameObject Tile1_3;
+    public GameObject Tile2_3;
+    public GameObject Tile8_3;
+    public GameObject Tile11_3;
+    public GameObject Tile12_3;
     private GameManager gm;
 
     void Start()
@@ -37,6 +42,8 @@ public class GridStat : MonoBehaviour
         pC = GameObject.Find("Player").GetComponent<PlayerController>();
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
 
+
+        #region Level_1
         //This sets Tiles model and walkable by level..
         if (gm.level_1 == true)
         {
@@ -81,7 +88,9 @@ public class GridStat : MonoBehaviour
 
             }
         }
+        #endregion
 
+        #region Level_2
         if (gm.level_2 == true)
         {
             if (x == 0 && y == 0 || x == 1 && y == 0 || x == 2 && y == 0 || x == 2 && y == 1 || x == 2 && y == 2 || x == 2 && y == 3)
@@ -126,8 +135,51 @@ public class GridStat : MonoBehaviour
                 }
             }
         }
+        #endregion
+
+        #region Level_3
+        if (gm.level_3 == true)
+        {
+            if (x == 0 && y == 1 || x == 1 && y == 0 || x == 1 && y == 1 || x == 1 && y == 2 || x == 1 && y == 3 || x == 2 && y == 2 || x == 2 && y == 1 || x == 2 && y == 0)
+            {
+                waypoint.SetActive(true);
+                gameObject.layer = 9;
+
+                if (x == 1 && y == 0 || x == 1 && y == 2 || x == 1 && y == 3 || x == 2 && y == 0) Tile1_3.SetActive(true);
+
+                if (x == 0 && y == 1 || x == 1 && y == 1 || x == 2 && y == 1)
+                {
+                    Tile2_3.SetActive(true);
+                    if (x == 0 && y == 1)
+                    {
+                        gameObject.tag = "Finish";
+                    }
+                }
+
+                if (x == 2 && y == 2)
+                {
+                    Tile11_3.SetActive(true);
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
+                }
+            }
+            else
+            {
+                if (x == 0 && y == 0 || x == 0 && y == 2 || x == 0 && y == 3)
+                {
+                    Tile8_3.SetActive(true);
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
+                }
+                if (x == 2 && y == 3)
+                {
+                    Tile12_3.SetActive(true);
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 270, transform.eulerAngles.z);
+                }
+            }
+        }
 
     }
+    #endregion
+
 
     void PlayerCheck()
     {
