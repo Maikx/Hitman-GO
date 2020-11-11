@@ -37,6 +37,14 @@ public class GridStat : MonoBehaviour
     public GameObject Tile12_3;
     public GameObject Tile1_4;
     public GameObject Tile2_4;
+    public GameObject Tile1_5;
+    public GameObject Tile2_5;
+    public GameObject Tile6_5;
+    public GameObject Tile7_5;
+    public GameObject Tile13_5;
+    public GameObject Tile14_5;
+    public GameObject Tile15_5;
+    public GameObject Tile23_5;
     private GameManager gm;
 
     void Start()
@@ -44,9 +52,9 @@ public class GridStat : MonoBehaviour
         pC = GameObject.Find("Player").GetComponent<PlayerController>();
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
 
+        //This sets Tiles model and walkable by level..
 
         #region Level_1
-        //This sets Tiles model and walkable by level..
         if (gm.level_1 == true)
         {
             if (x == 1 && y == 1 || x == 1 && y == 2 || x == 1 && y == 3)
@@ -180,8 +188,7 @@ public class GridStat : MonoBehaviour
         }
         #endregion
 
-
-
+        #region Level_4
         if (gm.level_4 == true)
         {
             if (x == 0 && y == 0 || x == 0 && y == 1 || x == 0 && y == 2 || x == 0 && y == 3 || x == 1 && y == 0 || x == 1 && y == 1 || x == 1 && y == 2 || x == 1 && y == 3 || x == 1 && y == 4 || x == 2 && y == 0 || x == 2 && y == 1 || x == 2 && y == 2 || x == 2 && y == 3 || x == 2 && y == 4 || x == 3 && y == 0 || x == 3 && y == 1 || x == 3 && y == 2 || x == 3 && y == 3)
@@ -219,6 +226,67 @@ public class GridStat : MonoBehaviour
             }
 
         }
+        #endregion
+
+        #region Level_5
+        if (gm.level_5 == true)
+        {
+            if (x == 0 && y == 1 || x == 1 && y == 1 || x == 1 && y == 2 || x == 1 && y == 3 || x == 2 && y == 0 || x == 2 && y == 1 || x == 2 && y == 2 || x == 2 && y == 3 || x == 3 && y == 0 || x == 3 && y == 1 || x == 3 && y == 2 || x == 3 && y == 3)
+            {
+                waypoint.SetActive(true);
+                gameObject.layer = 9;
+
+                if (x == 0 && y == 1 || x == 1 && y == 3 || x == 2 && y == 3 || x == 3 && y == 3)
+                {
+                    Tile6_5.SetActive(true);
+                    if (x == 0 && y == 1) gameObject.tag = "Finish";
+                }
+
+                if (x == 1 && y == 2 || x == 2 && y == 0 || x == 2 && y == 1 || x == 2 && y == 2 || x == 3 && y == 2)
+                {
+                    Tile1_5.SetActive(true);
+                }
+
+                if (x == 3 && y == 0)
+                {
+                    Tile2_5.SetActive(true);
+                }
+
+                if (x == 1 && y == 1)
+                {
+                    Tile7_5.SetActive(true);
+                }
+
+                if (x == 3 && y == 1)
+                {
+                    Tile23_5.SetActive(true);
+                }
+
+            }
+            else
+            {
+                if (x == 0 && y == 0 || x == 1 && y == 0)
+                {
+                    Tile1_5.SetActive(true);
+                }
+
+                if (x == 0 && y == 3 || x == 1 && y == 4 || x == 2 && y == 4 || x == 3 && y == 4)
+                {
+                    Tile13_5.SetActive(true);
+                }
+
+                if (x == 0 && y == 4)
+                {
+                    Tile14_5.SetActive(true);
+                }
+
+                if (x == 0 && y == 2)
+                {
+                    Tile15_5.SetActive(true);
+                }
+            }
+        }
+        #endregion
     }
     void PlayerCheck()
     {
