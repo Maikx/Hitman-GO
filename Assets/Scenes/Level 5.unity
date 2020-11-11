@@ -362,25 +362,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &946342968 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7917510070270239947, guid: 09a9c921fda2be84093464182b22296b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1536564725}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &946342970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 946342968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 977d2e96831f0754c9e6303b0d8a8b75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PauseUI: {fileID: 946342968}
 --- !u!1001 &1536564725
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -407,7 +388,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 946342970}
+      objectReference: {fileID: 0}
     - target: {fileID: 1306226299940504256, guid: 09a9c921fda2be84093464182b22296b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -542,7 +523,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 946342970}
+      objectReference: {fileID: 0}
     - target: {fileID: 3150544834206246726, guid: 09a9c921fda2be84093464182b22296b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -577,7 +558,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 946342970}
+      objectReference: {fileID: 0}
     - target: {fileID: 4584776293461594914, guid: 09a9c921fda2be84093464182b22296b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
