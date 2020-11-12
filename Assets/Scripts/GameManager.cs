@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
         if (level_3 == true) playerStartingPosition = new Vector3(4, 0, 8);
         if (level_4 == true) playerStartingPosition = new Vector3(0, 0, 0);
         if (level_5 == true) playerStartingPosition = new Vector3(12, 0, 8);
+        if (level_6 == true) playerStartingPosition = new Vector3(12, 0, 8);
     }
 
     void Start()

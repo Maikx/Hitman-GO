@@ -45,6 +45,15 @@ public class GridStat : MonoBehaviour
     public GameObject Tile14_5;
     public GameObject Tile15_5;
     public GameObject Tile23_5;
+    public GameObject Tile1_6;
+    public GameObject Tile6_6;
+    public GameObject Tile16_6;
+    public GameObject Tile17_6;
+    public GameObject Tile18_6;
+    public GameObject Tile19_6;
+    public GameObject Tile20_6;
+    public GameObject Tile21_6;
+    public GameObject Tile22_6;
     private GameManager gm;
 
     void Start()
@@ -245,6 +254,19 @@ public class GridStat : MonoBehaviour
                 if (x == 1 && y == 2 || x == 2 && y == 0 || x == 2 && y == 1 || x == 2 && y == 2 || x == 3 && y == 2)
                 {
                     Tile1_5.SetActive(true);
+                    if (x == 2 && y == 1)
+                    {
+                        denyForward = true;
+                        denyRight = true;
+                    }
+
+                    if (x == 2 && y == 2)
+                    {
+                        denyLeft = true;
+                        denyForward = true;
+                    }
+
+                    if (x == 1 && y == 2) denyBackward = true;
                 }
 
                 if (x == 3 && y == 0)
@@ -255,6 +277,7 @@ public class GridStat : MonoBehaviour
                 if (x == 1 && y == 1)
                 {
                     Tile7_5.SetActive(true);
+                    denyBackward = true;
                 }
 
                 if (x == 3 && y == 1)
@@ -283,6 +306,87 @@ public class GridStat : MonoBehaviour
                 if (x == 0 && y == 2)
                 {
                     Tile15_5.SetActive(true);
+                }
+            }
+        }
+        #endregion
+
+        #region Level_6
+        if (gm.level_6 == true)
+        {
+            if (x == 0 && y == 1 || x == 0 && y == 3 || x == 1 && y == 0 || x == 1 && y == 1 || x == 1 && y == 2 || x == 1 && y == 3 || x == 2 && y == 0 || x == 2 && y == 1 || x == 2 && y == 2 || x == 2 && y == 3 || x == 3 && y == 0 || x == 3 && y == 1 || x == 3 && y == 2 || x == 3 && y == 3)
+            {
+                waypoint.SetActive(true);
+                gameObject.layer = 9;
+
+                if (x == 2 && y == 0 || x == 3 && y == 0 || x == 2 && y == 1 || x == 3 && y == 1)
+                {
+                    Tile1_6.SetActive(true);
+                    if (x == 2 && y == 1)
+                    {
+                        denyForward = true;
+                        denyBackward = true;
+                    }
+                    if (x == 3 && y == 1) denyForward = true;
+                }
+
+                if (x == 2 && y == 2 || x == 3 && y == 2)
+                {
+                    Tile6_6.SetActive(true);
+                    if (x == 2 && y == 2)
+                    {
+                        denyRight = true;
+                        denyForward = true;
+                    }
+                    if (x == 3 && y == 2) denyRight = true;
+                }
+
+                if (x == 1 && y == 0 || x == 0 && y == 1 || x == 1 && y == 1)
+                {
+                    Tile17_6.SetActive(true);
+                    if (x == 1 && y == 1) denyBackward = true;
+                }
+
+                if (x == 1 && y == 2)
+                {
+                    Tile18_6.SetActive(true);
+                    denyBackward = true;
+                }
+
+                if (x == 3 && y == 3)
+                {
+                    Tile19_6.SetActive(true);
+                    denyLeft = true;
+                }
+
+                if (x == 2 && y == 3)
+                {
+                    Tile20_6.SetActive(true);
+                    denyLeft = true;
+                }
+
+                if (x == 1 && y == 3)
+                {
+                    Tile21_6.SetActive(true);
+                }
+
+                if (x == 0 && y == 3)
+                {
+                    Tile22_6.SetActive(true);
+                    gameObject.tag = "Finish";
+                }
+
+            }
+            else
+            {
+                if (x == 0 && y == 0)
+                {
+                    Tile16_6.SetActive(true);
+                }
+
+                if (x == 0 && y == 2)
+                {
+                    Tile18_6.SetActive(true);
                 }
             }
         }
