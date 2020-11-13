@@ -202,7 +202,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -90, z: 0}
 --- !u!1001 &1364187931
 PrefabInstance:
@@ -211,6 +211,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2537509656958146423, guid: 9ffcb9ee875f7c742ab9cbb370fce159,
+        type: 3}
+      propertyPath: PauseMenu
+      value: 
+      objectReference: {fileID: 1903673137}
     - target: {fileID: 3449079609936099709, guid: 9ffcb9ee875f7c742ab9cbb370fce159,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -364,7 +369,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &1753299118
 MonoBehaviour:
@@ -378,6 +383,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f9ac128de4ee34b9d7e94f2a3c0b6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menu: 0
+  level_1: 0
+  level_2: 0
+  level_3: 0
+  level_4: 0
+  level_5: 0
+  level_6: 0
+  PauseMenu: {fileID: 0}
+  isPaused: 0
+  playerStartingPosition: {x: 0, y: 0, z: 0}
 --- !u!1001 &1903673136
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -497,6 +512,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09a9c921fda2be84093464182b22296b, type: 3}
+--- !u!1 &1903673137 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 398152358359580120, guid: 09a9c921fda2be84093464182b22296b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1903673136}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4262557043853526735
 PrefabInstance:
   m_ObjectHideFlags: 0

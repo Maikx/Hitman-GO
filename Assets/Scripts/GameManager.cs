@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,7 +12,6 @@ public class GameManager : MonoBehaviour
     public bool level_4;
     public bool level_5;
     public bool level_6;
-    [SerializeField] private bool isPaused;
     //questi verrano cambiati con l'index della scena perchè occupano linee di script inutili..
 
     private PlayerController pC;
@@ -38,21 +38,15 @@ public class GameManager : MonoBehaviour
         if (pC.playerIsCaught == true) Debug.Log("GameLost, reloade scene");
 
         if (pC.playerIsAtFinish == true) Debug.Log("GameWon, pop up ui");
-
-        if (Input.GetKey(KeyCode.Escape))
-        {
-            isPaused = !isPaused;
-        }
         
-        if (isPaused)
-        {
-            Debug.Log("GamePause, pop up ui");
-        }
-        else
-        {
-            Debug.Log("GameResumed, back to game");
-        }
-        
+        //if (isPaused)
+        //{
+        //    Debug.Log("GamePause, pop up ui");
+        //}
+        //else
+        //{
+        //    Debug.Log("GameResumed, back to game");
+        //}
     }
 }
 
