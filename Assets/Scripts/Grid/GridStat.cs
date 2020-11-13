@@ -248,6 +248,7 @@ public class GridStat : MonoBehaviour
                 if (x == 0 && y == 1 || x == 1 && y == 3 || x == 2 && y == 3 || x == 3 && y == 3)
                 {
                     Tile6_5.SetActive(true);
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
                     if (x == 0 && y == 1) gameObject.tag = "Finish";
                 }
 
@@ -272,17 +273,20 @@ public class GridStat : MonoBehaviour
                 if (x == 3 && y == 0)
                 {
                     Tile2_5.SetActive(true);
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 90, transform.eulerAngles.z);
                 }
 
                 if (x == 1 && y == 1)
                 {
                     Tile7_5.SetActive(true);
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
                     denyBackward = true;
                 }
 
                 if (x == 3 && y == 1)
                 {
                     Tile23_5.SetActive(true);
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 270, transform.eulerAngles.z);
                 }
 
             }
@@ -295,7 +299,15 @@ public class GridStat : MonoBehaviour
 
                 if (x == 0 && y == 3 || x == 1 && y == 4 || x == 2 && y == 4 || x == 3 && y == 4)
                 {
-                    Tile13_5.SetActive(true);
+                    if (x == 0 && y == 3)
+                    {
+                        Tile13_5.SetActive(true);
+                    }
+                    else
+                    {
+                        transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 90, transform.eulerAngles.z);
+                        Tile13_5.SetActive(true);
+                    }
                 }
 
                 if (x == 0 && y == 4)
