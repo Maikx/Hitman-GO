@@ -4,6 +4,7 @@ using System.Transactions;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
@@ -27,7 +28,6 @@ public class PlayerController : MonoBehaviour
     public Transform target = null;
     private GameManager gm;
 
-
     void Start()
     {
         right = GameObject.Find("Right").GetComponent<Right>();
@@ -43,9 +43,41 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        MouseClick();
         Movement();
         DestroyPlayer();
         PlayerCaught();
+    }
+
+    public void MouseClick()
+    {
+        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
+        {
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit))
+            {
+                if(hit.collider.tag == "Left" && canMoveLeft == true && isMoving == false)
+                {
+                    target = left.left;
+                }
+
+                if (hit.collider.tag == "Right" && canMoveRight == true && isMoving == false)
+                {
+                    target = right.right;
+                }
+
+                if (hit.collider.tag == "Forward" && canMoveForward == true && isMoving == false)
+                {
+                    target = forward.forward;
+                }
+
+                if (hit.collider.tag == "Backward" && canMoveBackward == true && isMoving == false)
+                {
+                    target = backward.backward;
+                }
+            }
+        }
     }
 
     private void Movement()

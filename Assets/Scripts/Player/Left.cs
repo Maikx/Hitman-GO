@@ -26,6 +26,9 @@ public class Left : MonoBehaviour
         if (Input.GetKey(KeyCode.A) && pC.canMoveLeft == true && pC.isMoving == false)
         {
             pC.target = left;
+            pC.canMoveForward = false;
+            pC.canMoveRight = false;
+            pC.canMoveBackward = false;
             pC.canMoveLeft = false;
         }
     }
@@ -37,6 +40,11 @@ public class Left : MonoBehaviour
         {
             pC.canMoveLeft = true;
             left = collision.gameObject.transform;
+        }
+
+        if (collision.gameObject.layer == 8)
+        {
+            pC.canMoveLeft = false;
         }
     }
 }

@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Right
+  - Left
+  - Forward
+  - Backward
   layers:
   - Default
   - TransparentFX

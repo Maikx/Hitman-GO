@@ -26,7 +26,10 @@ public class Right : MonoBehaviour
         if (Input.GetKey(KeyCode.D) && pC.canMoveRight == true && pC.isMoving == false)
         {
             pC.target = right;
+            pC.canMoveForward = false;
             pC.canMoveRight = false;
+            pC.canMoveBackward = false;
+            pC.canMoveLeft = false;
         }
     }
 
@@ -37,6 +40,11 @@ public class Right : MonoBehaviour
         {
             pC.canMoveRight = true;
             right = collision.gameObject.transform;
+        }
+
+        if (collision.gameObject.layer == 8)
+        {
+            pC.canMoveRight = false;
         }
     }
 }

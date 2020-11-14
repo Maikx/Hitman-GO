@@ -26,7 +26,10 @@ public class Backward : MonoBehaviour
         if (Input.GetKey(KeyCode.S) && pC.canMoveBackward == true && pC.isMoving == false)
         {
             pC.target = backward;
+            pC.canMoveForward = false;
+            pC.canMoveRight = false;
             pC.canMoveBackward = false;
+            pC.canMoveLeft = false;
         }
     }
 
@@ -37,6 +40,11 @@ public class Backward : MonoBehaviour
         {
             pC.canMoveBackward = true;
             backward = collision.gameObject.transform;
+        }
+
+        if (collision.gameObject.layer == 8)
+        {
+            pC.canMoveBackward = false;
         }
     }
 

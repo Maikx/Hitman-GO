@@ -27,6 +27,9 @@ public class Forward : MonoBehaviour
         {
             pC.target = forward;
             pC.canMoveForward = false;
+            pC.canMoveRight = false;
+            pC.canMoveBackward = false;
+            pC.canMoveLeft = false;
         }
     }
 
@@ -37,6 +40,11 @@ public class Forward : MonoBehaviour
         {
             pC.canMoveForward = true;
             forward = collision.gameObject.transform;
+        }
+
+        if (collision.gameObject.layer == 8)
+        {
+            pC.canMoveForward = false;
         }
     }
 }
