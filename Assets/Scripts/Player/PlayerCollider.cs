@@ -32,5 +32,9 @@ public class PlayerCollider : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
+        if(collision.gameObject.tag == "Rock")
+        {
+            pC.throwRock = true;
+        }
     }
 }

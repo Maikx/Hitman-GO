@@ -9,6 +9,7 @@ TagManager:
   - Left
   - Forward
   - Backward
+  - Rock
   layers:
   - Default
   - TransparentFX

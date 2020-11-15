@@ -15,6 +15,7 @@ public class GridStat : MonoBehaviour
     public bool moveCamera;
     private PlayerController pC;
     public GameObject waypoint;
+    public GameObject rock;
     public GameObject Tile1_1;
     public GameObject Tile2_1;
     public GameObject Tile3_1;
@@ -259,6 +260,9 @@ public class GridStat : MonoBehaviour
                     {
                         denyForward = true;
                         denyRight = true;
+                        denyBackward = true;
+                        gameObject.tag = "Rock";
+                        rock.SetActive(true);
                     }
 
                     if (x == 2 && y == 2)
@@ -287,6 +291,7 @@ public class GridStat : MonoBehaviour
                 {
                     Tile23_5.SetActive(true);
                     transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 270, transform.eulerAngles.z);
+                    denyForward = true;
                 }
 
             }
@@ -419,6 +424,8 @@ public class GridStat : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             PlayerCheck();
+            if (x == 2 && y == 1) rock.SetActive(false);
+
         }
     }
 }
