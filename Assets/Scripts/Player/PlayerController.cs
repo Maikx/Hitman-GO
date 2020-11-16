@@ -52,15 +52,16 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        MouseClick();
+        InputSystem();
         Movement();
         DestroyPlayer();
         PlayerCaught();
         Rock();
     }
 
-    public void MouseClick()
+    public void InputSystem()
     {
+        #region Mouse
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             RaycastHit hit;
@@ -88,6 +89,38 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+        #endregion
+
+        #region Touch
+        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                if (hit.collider.tag == "Left" && canMoveLeft == true && isMoving == false)
+                {
+                    target = left.left;
+                }
+
+                if (hit.collider.tag == "Right" && canMoveRight == true && isMoving == false)
+                {
+                    target = right.right;
+                }
+
+                if (hit.collider.tag == "Forward" && canMoveForward == true && isMoving == false)
+                {
+                    target = forward.forward;
+                }
+
+                if (hit.collider.tag == "Backward" && canMoveBackward == true && isMoving == false)
+                {
+                    target = backward.backward;
+                }
+            }
+        }
+        #endregion
     }
 
     private void Movement()
