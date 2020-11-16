@@ -46,6 +46,7 @@ public class GridStat : MonoBehaviour
     public GameObject Tile14_5;
     public GameObject Tile15_5;
     public GameObject Tile23_5;
+    public GameObject Tile24_5;
     public GameObject Tile1_6;
     public GameObject Tile6_6;
     public GameObject Tile16_6;
@@ -248,12 +249,20 @@ public class GridStat : MonoBehaviour
 
                 if (x == 0 && y == 1 || x == 1 && y == 3 || x == 2 && y == 3 || x == 3 && y == 3)
                 {
-                    Tile6_5.SetActive(true);
-                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
-                    if (x == 0 && y == 1) gameObject.tag = "Finish";
+                    if (x == 1 && y == 3)
+                    {
+                        Tile24_5.SetActive(true);
+                        transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
+                    }
+                    else
+                    {
+                        Tile6_5.SetActive(true);
+                        transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
+                        if (x == 0 && y == 1) gameObject.tag = "Finish";
+                    }
                 }
 
-                if (x == 1 && y == 2 || x == 2 && y == 0 || x == 2 && y == 1 || x == 2 && y == 2 || x == 3 && y == 2)
+                if (x == 2 && y == 0 || x == 2 && y == 1 || x == 2 && y == 2 || x == 3 && y == 2)
                 {
                     Tile1_5.SetActive(true);
                     if (x == 2 && y == 1)
@@ -270,8 +279,13 @@ public class GridStat : MonoBehaviour
                         denyLeft = true;
                         denyForward = true;
                     }
+                }
 
-                    if (x == 1 && y == 2) denyBackward = true;
+                if (x == 1 && y == 2)
+                {
+                    Tile6_5.SetActive(true);
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 180, transform.eulerAngles.z);
+                    denyBackward = true;
                 }
 
                 if (x == 3 && y == 0)
