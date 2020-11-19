@@ -332,11 +332,13 @@ public class GridStat : MonoBehaviour
                 if (x == 0 && y == 4)
                 {
                     Tile14_5.SetActive(true);
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 90, transform.eulerAngles.z);
                 }
 
                 if (x == 0 && y == 2)
                 {
                     Tile15_5.SetActive(true);
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 90, transform.eulerAngles.z);
                 }
             }
         }
