@@ -16,6 +16,7 @@ public class GridStat : MonoBehaviour
     private PlayerController pC;
     public GameObject waypoint;
     public GameObject rock;
+    public GameObject[] currentTile;
     public GameObject Tile1_1;
     public GameObject Tile2_1;
     public GameObject Tile3_1;
