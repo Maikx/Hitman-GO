@@ -516,7 +516,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6411899394717425457}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2917155404586390408}
+        m_MethodName: PlayAgain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1013786626187502445
 GameObject:
   m_ObjectHideFlags: 0
@@ -3242,6 +3253,7 @@ GameObject:
   - component: {fileID: 4031465328881307856}
   - component: {fileID: 1336155711415014790}
   - component: {fileID: 3448295285032233457}
+  - component: {fileID: 2917155404586390408}
   m_Layer: 5
   m_Name: UI_LVL_6
   m_TagString: Untagged
@@ -3345,6 +3357,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenuO: {fileID: 6665029989660174576}
   isPaused: 0
+--- !u!114 &2917155404586390408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7196739812186779655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2e6659aa823d2a4c8f1caacfade070f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VictoryUI: {fileID: 3586660026763643350}
 --- !u!1 &7608846094034586410
 GameObject:
   m_ObjectHideFlags: 0
@@ -3540,7 +3565,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6365225377601665489}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2917155404586390408}
+        m_MethodName: NextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7915234366510031417
 GameObject:
   m_ObjectHideFlags: 0

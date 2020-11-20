@@ -11,7 +11,7 @@ public class LevelSelection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        CheckInts();
     }
 
     // Update is called once per frame
@@ -62,6 +62,51 @@ public class LevelSelection : MonoBehaviour
             LevelX[4].gameObject.SetActive(false);
         }
     }
+
+    public void CheckInts()
+    {
+        if(PersistentBools.CompLevel1==1)
+        {
+            LevelXCom[0] = true;
+        }
+        else
+        {
+            LevelXCom[0] = false;
+        }
+        if (PersistentBools.CompLevel2 == 1)
+        {
+            LevelXCom[1] = true;
+        }
+        else
+        {
+            LevelXCom[1] = false;
+        }
+        if (PersistentBools.CompLevel3 == 1)
+        {
+            LevelXCom[2] = true;
+        }
+        else
+        {
+            LevelXCom[2] = false;
+        }
+        if (PersistentBools.CompLevel4 == 1)
+        {
+            LevelXCom[3] = true;
+        }
+        else
+        {
+            LevelXCom[3] = false;
+        }
+        if (PersistentBools.CompLevel5 == 1)
+        {
+            LevelXCom[4] = true;
+        }
+        else
+        {
+            LevelXCom[4] = false;
+        }
+    }
+
     #region Level Selection
     public void GoToLevel1()
     {

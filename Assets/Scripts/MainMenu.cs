@@ -79,7 +79,18 @@ public class MainMenu : MonoBehaviour
     #region Reset
     public void ConfirmReset()
     {
-        Debug.Log("Game Resetted");
+        PlayerPrefs.SetInt("Level1Comp", 0);
+        PlayerPrefs.SetInt("Level2Comp", 0);
+        PlayerPrefs.SetInt("Level3Comp", 0);
+        PlayerPrefs.SetInt("Level4Comp", 0);
+        PlayerPrefs.SetInt("Level5Comp", 0);
+        PlayerPrefs.SetInt("Level6Comp", 0);
+        PersistentBools.CompLevel1 = 0;
+        PersistentBools.CompLevel2 = 0;
+        PersistentBools.CompLevel3 = 0;
+        PersistentBools.CompLevel4 = 0;
+        PersistentBools.CompLevel5 = 0;
+        PersistentBools.CompLevel6 = 0;
     }
     public void NegateReset()
     {
