@@ -17,46 +17,6 @@ public class GridStat : MonoBehaviour
     public GameObject waypoint;
     public GameObject rock;
     public GameObject[] currentTile;
-    public GameObject Tile1_1;
-    public GameObject Tile2_1;
-    public GameObject Tile3_1;
-    public GameObject Tile4_1;
-    public GameObject Tile5_1;
-    public GameObject Tile3_2;
-    public GameObject Tile6_mini_2;
-    public GameObject Tile6_2;
-    public GameObject Tile7_2;
-    public GameObject Tile8_mini_2;
-    public GameObject Tile8_2;
-    public GameObject Tile9_2;
-    public GameObject Tile10_2;
-    public GameObject Tile11_2;
-    public GameObject Tile12_2;
-    public GameObject Tile1_3;
-    public GameObject Tile2_3;
-    public GameObject Tile8_3;
-    public GameObject Tile11_3;
-    public GameObject Tile12_3;
-    public GameObject Tile1_4;
-    public GameObject Tile2_4;
-    public GameObject Tile1_5;
-    public GameObject Tile2_5;
-    public GameObject Tile6_5;
-    public GameObject Tile7_5;
-    public GameObject Tile13_5;
-    public GameObject Tile14_5;
-    public GameObject Tile15_5;
-    public GameObject Tile23_5;
-    public GameObject Tile24_5;
-    public GameObject Tile1_6;
-    public GameObject Tile6_6;
-    public GameObject Tile16_6;
-    public GameObject Tile17_6;
-    public GameObject Tile18_6;
-    public GameObject Tile19_6;
-    public GameObject Tile20_6;
-    public GameObject Tile21_6;
-    public GameObject Tile22_6;
     private GameManager gm;
 
     void Start()
@@ -76,13 +36,13 @@ public class GridStat : MonoBehaviour
 
                 if (x == 1 && y == 1)
                 {
-                    Tile4_1.SetActive(true);
+                    currentTile[3].SetActive(true);
                     transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
                 }
 
                 if (x == 1 && y == 2 || x == 1 && y == 3)
                 {
-                    Tile2_1.SetActive(true);
+                    currentTile[1].SetActive(true);
                     transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
                     if (x == 1 && y == 3)
                     {
@@ -94,17 +54,17 @@ public class GridStat : MonoBehaviour
             {
                 if (x == 0 && y == 0 || x == 1 && y == 0 || x == 2 && y == 0)
                 {
-                    Tile5_1.SetActive(true);
+                    currentTile[4].SetActive(true);
                     transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
                 }
                 if (x == 0 && y == 1 || x == 2 && y == 1)
                 {
-                    Tile3_1.SetActive(true);
+                    currentTile[2].SetActive(true);
                     transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
                 }
                 if (x == 0 && y == 2 || x == 0 && y == 3 || x == 2 && y == 2 || x == 2 && y == 3)
                 {
-                    Tile1_1.SetActive(true);
+                    currentTile[0].SetActive(true);
                 }
 
 
@@ -121,13 +81,13 @@ public class GridStat : MonoBehaviour
                 gameObject.layer = 9;
                 if (x == 0 && y == 0 || x == 1 && y == 0 || x == 2 && y == 1 || x == 2 && y == 2 || x == 2 && y == 3)
                 {
-                    Tile6_mini_2.SetActive(true);
+                    currentTile[6].SetActive(true);
                     if (x == 2 && y == 1 || x == 2 && y == 2 || x == 2 && y == 3) transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 270, transform.eulerAngles.z);
                     if (x == 0 && y == 0) gameObject.tag = "Finish";
                 }
                 if (x == 2 && y == 0)
                 {
-                    Tile7_2.SetActive(true);
+                    currentTile[8].SetActive(true);
                     transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
                 }
             }
@@ -135,24 +95,24 @@ public class GridStat : MonoBehaviour
             {
                 if (x == 0 && y == 1 || x == 1 && y == 2 || x == 1 && y == 3)
                 {
-                    Tile8_2.SetActive(true);
+                    currentTile[10].SetActive(true);
                     if (x == 1 && y == 2 || x == 1 && y == 3) transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
                 }
 
                 if (x == 0 && y == 2)
                 {
-                    Tile10_2.SetActive(true);
+                    currentTile[12].SetActive(true);
                     transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
                 }
 
                 if (x == 0 && y == 3)
                 {
-                    Tile3_2.SetActive(true);
+                    currentTile[5].SetActive(true);
                     transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 270, transform.eulerAngles.z);
                 }
                 if (x == 1 && y == 1)
                 {
-                    Tile9_2.SetActive(true);
+                    currentTile[11].SetActive(true);
                     transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 270, transform.eulerAngles.z);
                 }
             }
@@ -167,11 +127,11 @@ public class GridStat : MonoBehaviour
                 waypoint.SetActive(true);
                 gameObject.layer = 9;
 
-                if (x == 1 && y == 0 || x == 1 && y == 2 || x == 1 && y == 3 || x == 2 && y == 0) Tile1_3.SetActive(true);
+                if (x == 1 && y == 0 || x == 1 && y == 2 || x == 1 && y == 3 || x == 2 && y == 0) currentTile[15].SetActive(true);
 
                 if (x == 0 && y == 1 || x == 1 && y == 1 || x == 2 && y == 1)
                 {
-                    Tile2_3.SetActive(true);
+                    currentTile[16].SetActive(true);
                     if (x == 0 && y == 1)
                     {
                         gameObject.tag = "Finish";
@@ -180,7 +140,7 @@ public class GridStat : MonoBehaviour
 
                 if (x == 2 && y == 2)
                 {
-                    Tile11_3.SetActive(true);
+                    currentTile[18].SetActive(true);
                     transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
                 }
             }
@@ -188,12 +148,12 @@ public class GridStat : MonoBehaviour
             {
                 if (x == 0 && y == 0 || x == 0 && y == 2 || x == 0 && y == 3)
                 {
-                    Tile8_3.SetActive(true);
+                    currentTile[17].SetActive(true);
                     transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
                 }
                 if (x == 2 && y == 3)
                 {
-                    Tile12_3.SetActive(true);
+                    currentTile[19].SetActive(true);
                     transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 270, transform.eulerAngles.z);
                 }
             }
@@ -210,7 +170,7 @@ public class GridStat : MonoBehaviour
 
                 if (x == 0 && y == 0 || x == 0 && y == 1 || x == 0 && y == 2 || x == 0 && y == 3 || x == 1 && y == 0 || x == 1 && y == 1 || x == 1 && y == 2 || x == 1 && y == 3 || x == 1 && y == 4 || x == 3 && y == 0 || x == 3 && y == 1 || x == 3 && y == 2 || x == 3 && y == 3)
                 {
-                    Tile1_4.SetActive(true);
+                    currentTile[20].SetActive(true);
                     if (x == 0 && y == 2) denyBackward = true;
                     if (x == 1 && y == 2) denyForward = true;
                     if (x == 1 && y == 3) denyLeft = true;
@@ -220,7 +180,7 @@ public class GridStat : MonoBehaviour
 
                 if (x == 2 && y == 0 || x == 2 && y == 1 || x == 2 && y == 2 || x == 2 && y == 3 || x == 2 && y == 4)
                 {
-                    Tile2_4.SetActive(true);
+                    currentTile[21].SetActive(true);
                     transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
                     if (x == 2 && y == 3) denyRight = true;
                     if (x == 2 && y == 4) denyLeft = true;
@@ -234,7 +194,7 @@ public class GridStat : MonoBehaviour
             }
             else
             {
-                if (x == 0 && y == 4 || x == 3 && y == 4) Tile1_4.SetActive(true);
+                if (x == 0 && y == 4 || x == 3 && y == 4) currentTile[20].SetActive(true);
             }
 
         }
@@ -252,12 +212,12 @@ public class GridStat : MonoBehaviour
                 {
                     if (x == 1 && y == 3)
                     {
-                        Tile24_5.SetActive(true);
+                        currentTile[31].SetActive(true);
                         transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
                     }
                     else
                     {
-                        Tile6_5.SetActive(true);
+                        currentTile[24].SetActive(true);
                         transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
                         if (x == 0 && y == 1) gameObject.tag = "Finish";
                     }
@@ -265,7 +225,7 @@ public class GridStat : MonoBehaviour
 
                 if (x == 2 && y == 0 || x == 2 && y == 1 || x == 2 && y == 2 || x == 3 && y == 2)
                 {
-                    Tile1_5.SetActive(true);
+                    currentTile[22].SetActive(true);
                     if (x == 2 && y == 1)
                     {
                         denyForward = true;
@@ -284,27 +244,27 @@ public class GridStat : MonoBehaviour
 
                 if (x == 1 && y == 2)
                 {
-                    Tile6_5.SetActive(true);
+                    currentTile[24].SetActive(true);
                     transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 180, transform.eulerAngles.z);
                     denyBackward = true;
                 }
 
                 if (x == 3 && y == 0)
                 {
-                    Tile2_5.SetActive(true);
+                    currentTile[23].SetActive(true);
                     transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 90, transform.eulerAngles.z);
                 }
 
                 if (x == 1 && y == 1)
                 {
-                    Tile7_5.SetActive(true);
+                    currentTile[25].SetActive(true);
                     transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 90, transform.eulerAngles.z);
                     denyBackward = true;
                 }
 
                 if (x == 3 && y == 1)
                 {
-                    Tile23_5.SetActive(true);
+                    currentTile[30].SetActive(true);
                     transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 270, transform.eulerAngles.z);
                     denyForward = true;
                 }
@@ -314,31 +274,31 @@ public class GridStat : MonoBehaviour
             {
                 if (x == 0 && y == 0 || x == 1 && y == 0)
                 {
-                    Tile1_5.SetActive(true);
+                    currentTile[22].SetActive(true);
                 }
 
                 if (x == 0 && y == 3 || x == 1 && y == 4 || x == 2 && y == 4 || x == 3 && y == 4)
                 {
                     if (x == 0 && y == 3)
                     {
-                        Tile13_5.SetActive(true);
+                        currentTile[26].SetActive(true);
                     }
                     else
                     {
                         transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 90, transform.eulerAngles.z);
-                        Tile13_5.SetActive(true);
+                        currentTile[26].SetActive(true);
                     }
                 }
 
                 if (x == 0 && y == 4)
                 {
-                    Tile14_5.SetActive(true);
+                    currentTile[28].SetActive(true);
                     transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 90, transform.eulerAngles.z);
                 }
 
                 if (x == 0 && y == 2)
                 {
-                    Tile15_5.SetActive(true);
+                    currentTile[29].SetActive(true);
                     transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 90, transform.eulerAngles.z);
                 }
             }
@@ -355,7 +315,7 @@ public class GridStat : MonoBehaviour
 
                 if (x == 2 && y == 0 || x == 3 && y == 0 || x == 2 && y == 1 || x == 3 && y == 1)
                 {
-                    Tile1_6.SetActive(true);
+                    currentTile[33].SetActive(true);
                     if (x == 2 && y == 1)
                     {
                         denyForward = true;
@@ -366,7 +326,8 @@ public class GridStat : MonoBehaviour
 
                 if (x == 2 && y == 2 || x == 3 && y == 2)
                 {
-                    Tile6_6.SetActive(true);
+                    currentTile[34].SetActive(true);
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 270, transform.eulerAngles.z);
                     if (x == 2 && y == 2)
                     {
                         denyRight = true;
@@ -377,36 +338,37 @@ public class GridStat : MonoBehaviour
 
                 if (x == 1 && y == 0 || x == 0 && y == 1 || x == 1 && y == 1)
                 {
-                    Tile17_6.SetActive(true);
+                    currentTile[36].SetActive(true);
                     if (x == 1 && y == 1) denyBackward = true;
                 }
 
                 if (x == 1 && y == 2)
                 {
-                    Tile18_6.SetActive(true);
+                    currentTile[37].SetActive(true);
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 90, transform.eulerAngles.z);
                     denyBackward = true;
                 }
 
                 if (x == 3 && y == 3)
                 {
-                    Tile19_6.SetActive(true);
+                    currentTile[38].SetActive(true);
                     denyLeft = true;
                 }
 
                 if (x == 2 && y == 3)
                 {
-                    Tile20_6.SetActive(true);
+                    currentTile[39].SetActive(true);
                     denyLeft = true;
                 }
 
                 if (x == 1 && y == 3)
                 {
-                    Tile21_6.SetActive(true);
+                    currentTile[40].SetActive(true);
                 }
 
                 if (x == 0 && y == 3)
                 {
-                    Tile22_6.SetActive(true);
+                    currentTile[41].SetActive(true);
                     gameObject.tag = "Finish";
                 }
 
@@ -415,12 +377,13 @@ public class GridStat : MonoBehaviour
             {
                 if (x == 0 && y == 0)
                 {
-                    Tile16_6.SetActive(true);
+                    currentTile[35].SetActive(true);
                 }
 
                 if (x == 0 && y == 2)
                 {
-                    Tile18_6.SetActive(true);
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 90, transform.eulerAngles.z);
+                    currentTile[37].SetActive(true);
                 }
             }
         }
