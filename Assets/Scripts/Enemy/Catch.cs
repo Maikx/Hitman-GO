@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Catch : MonoBehaviour
 {
@@ -22,6 +23,12 @@ public class Catch : MonoBehaviour
             pC.isMoving = true;
             enemy.target = collision.gameObject.transform;
             isPlayer = true;
+            StartCoroutine(RestartDelay());
         }
+    }
+    IEnumerator RestartDelay()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
