@@ -281,12 +281,12 @@ public class GridStat : MonoBehaviour
                 {
                     if (x == 0 && y == 3)
                     {
-                        currentTile[26].SetActive(true);
+                        currentTile[27].SetActive(true);
                     }
                     else
                     {
                         transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 90, transform.eulerAngles.z);
-                        currentTile[26].SetActive(true);
+                        currentTile[27].SetActive(true);
                     }
                 }
 
