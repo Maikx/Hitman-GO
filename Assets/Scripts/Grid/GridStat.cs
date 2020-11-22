@@ -283,10 +283,17 @@ public class GridStat : MonoBehaviour
                     {
                         currentTile[27].SetActive(true);
                     }
-                    else
+
+                    if (x == 0 && y == 3 || x == 1 && y == 4 || x == 2 && y == 4)
                     {
                         transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 90, transform.eulerAngles.z);
                         currentTile[27].SetActive(true);
+                    }
+
+                    if (x == 3 && y == 4)
+                    {
+                        transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 90, transform.eulerAngles.z);
+                        currentTile[26].SetActive(true);
                     }
                 }
 
