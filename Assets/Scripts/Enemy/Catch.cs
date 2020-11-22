@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Catch : MonoBehaviour
 {
-    private Enemy enemy;
+    public Enemy enemy;
     private PlayerController pC;
     public bool isPlayer;
     public bool isRock;
@@ -13,7 +13,6 @@ public class Catch : MonoBehaviour
     void Start()
     {
         pC = GameObject.Find("Player").GetComponent<PlayerController>();
-        enemy = GameObject.Find("Enemy Test").GetComponent<Enemy>();
     }
 
     private void OnTriggerEnter(Collider collision)
