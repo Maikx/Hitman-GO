@@ -3356,6 +3356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenuO: {fileID: 6665029989660174576}
+  CompStamp: {fileID: 1013786626187502445}
   isPaused: 0
 --- !u!114 &2917155404586390408
 MonoBehaviour:

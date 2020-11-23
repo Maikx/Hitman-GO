@@ -16,7 +16,7 @@ public class Level4 : MonoBehaviour
     }
     void Start()
     {
-        if (PersistentBools.CompLevel1 == 1)
+        if (PersistentBools.CompLevel4 == 1)
         {
             button.image.sprite = Comp;
             FinishedLevel.SetActive(true);

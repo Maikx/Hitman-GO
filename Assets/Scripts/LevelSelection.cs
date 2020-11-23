@@ -107,6 +107,11 @@ public class LevelSelection : MonoBehaviour
         }
     }
 
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     #region Level Selection
     public void GoToLevel1()
     {

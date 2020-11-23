@@ -16,7 +16,7 @@ public class Level5 : MonoBehaviour
     }
     void Start()
     {
-        if (PersistentBools.CompLevel1 == 1)
+        if (PersistentBools.CompLevel5 == 1)
         {
             button.image.sprite = Comp;
             FinishedLevel.SetActive(true);
