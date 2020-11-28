@@ -33,7 +33,7 @@ public class CameraMovement : MonoBehaviour
 
             rotation -= y;
             rotationY += x;
-            rotation = Mathf.Clamp(rotation, -15f, 50f); //vertical
+            rotation = Mathf.Clamp(rotation, -15f, 30f); //vertical
             rotationY = Mathf.Clamp(rotationY, -30f, 30f);  //horizontal
             parent.localRotation = Quaternion.Euler(0, rotationY,rotation);
         }
